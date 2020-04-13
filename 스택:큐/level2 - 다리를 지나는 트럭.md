@@ -35,3 +35,22 @@ solution 함수의 매개변수로 다리 길이 bridge_length, 다리가 견딜
 | 2             | 10     | [7,4,5,6]                       | 8      |
 | 100           | 100    | [10]                            | 101    |
 | 100           | 100    | [10,10,10,10,10,10,10,10,10,10] | 110    |
+
+## 내 코드
+
+```python
+def solution(bridge_length, weight, truck_weights):
+    q=[0]*bridge_length # 다리 길이 만큼 생성
+    answer=0
+    while q:
+        answer+=1
+        q.pop(0)
+        if truck_weights:
+            if sum(q)+truck_weights[0]<=weight:
+                q.append(truck_weights.pop(0))
+            else:
+                q.append(0)
+    return answer
+```
+
+- 큐를 1초마다 돌려야 하기 때문에 while문을 사용하였다.
