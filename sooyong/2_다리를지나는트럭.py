@@ -23,3 +23,4 @@ def solution(bridge_length, weight, truck_weights):
         if len(overed) == lenfirst:
             break
     return time
+ 
