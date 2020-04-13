@@ -17,3 +17,4 @@ def solution(participant, completion):
     for item in d.keys():
         answer = item
     return answer
+ 
