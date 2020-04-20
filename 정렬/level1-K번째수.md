@@ -42,3 +42,4 @@ def solution(array, commands):
     return result
 ```
 
+- 어려운 문제는 아니었음.

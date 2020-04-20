@@ -56,7 +56,7 @@ def solution(scoville, K):
     return answer
 ```
 
-- 코드가 정렬되지 않은 상태다.
+- 코드가 정렬되지 않은 상태다..
 
 ```python
 import heapq
