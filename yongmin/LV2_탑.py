@@ -1,8 +1,8 @@
 def solution(heights):
     answer = []
-    truck_num = len(heights)
+    top_num = len(heights)
 
-    while len(heights) > 0:
+    while heights:
         temp = heights.pop()
 
         for i in range(len(heights), 0, -1):
@@ -10,7 +10,7 @@ def solution(heights):
                 answer.insert(0, i)
                 break
 
-        if len(heights) + len(answer) != truck_num:
+        if len(heights) + len(answer) != top_num:
             answer.insert(0, 0)
 
     return answer
