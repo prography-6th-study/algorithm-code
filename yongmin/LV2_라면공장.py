@@ -16,7 +16,7 @@ def solution(stock, dates, supplies, k):
 
     return cnt
 
-#test
+# test
 stock = 4
 dates = [4, 10, 15]
 supplies = [20, 5, 10]
