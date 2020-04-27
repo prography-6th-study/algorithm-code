@@ -25,3 +25,9 @@ def solution(answers):
 ])
 def test_simple(answers, expected):
     assert solution(answers) == expected
+
+
+""" 풀이방법
+정답 리스트를 만들어 놓고, 맞았으면 +1을 해줬다.
+그러고 최댓값을 찾아서 최댓값과 같은 수를 가진 idx값을 넣어줬다.
+"""
