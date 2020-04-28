@@ -19,6 +19,8 @@ def solution(n, lost, reserve):
 
     return len(students) - students.count(0)
 
+
+
 # test
 print(solution(5, [2, 4], [1, 3, 5]))
 print(solution(5, [2, 4], [3]))
