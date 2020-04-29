@@ -30,6 +30,7 @@ def solution(name):
 
 
 
+
 # test
 print(solution('JEROEN'))
 print(solution('JAN'))
