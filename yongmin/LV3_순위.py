@@ -1,3 +1,4 @@
+# 순위
 def solution(n, results):
     # key: n번째 선수, value : n번 선수가 이긴/이기지 못한 사람들의 집합
     win, lose = {}, {}
