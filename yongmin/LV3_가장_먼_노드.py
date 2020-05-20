@@ -1,4 +1,3 @@
-# 가장 먼 노드
 def solution(n, edge):
     # 초기화
     graph = [[] for _ in range(n)]

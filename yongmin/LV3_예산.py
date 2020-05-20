@@ -1,4 +1,3 @@
-# 예산
 def solution(budgets, M):
     answer = 0
     # 상한액은 1 ~ 각 지역 요청의 최대값 사이
