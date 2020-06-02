@@ -1,0 +1,36 @@
+```python
+import heapq
+
+def solution(jobs):
+    last, now, answer = -1, 0, 0
+    wait = []
+    n = len(jobs)
+    count = 0
+    while(count < n):
+        # count 를 하나씩 증가시키면서
+        for job in jobs:
+            if last < job[0] <= now:
+                answer += (now-job[0])      # 현재 시간에서 몇초에 일어났는지를 알려주는 시간을 뺀다.
+                heapq.heappush(wait,job[1]) # 소요 시간을 넣는다.
+        if len(wait) > 0:
+            answer += len(wait) * wait[0]
+            last = now
+            now += heapq.heappop(wait)
+            count += 1 # 카운팅 하나 증가시켜준다.
+        else:
+            now += 1 # 아니라면 현재 시간을 하나 증가시켜 준다.
+    return answer // n
+
+
+
+
+
+jobs = [[0, 3], [1, 9], [2, 6]]
+
+print(solution(jobs))
+```
+
+### 풀이방법
+
+- 세로로 막대를 하나씩 없애준다는 생각을 하는 것이 중요했다.
+
