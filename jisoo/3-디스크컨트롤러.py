@@ -28,8 +28,8 @@ def solution(jobs):
         else:
           # queue에 아직 아무것도 없으므로 시간을 +1 해준다.
             time += 1
-    print(answer)
-    # return answer//n
+        print(answer)
+    return answer//n
         
 
 @pytest.mark.parametrize("jobs, expected", [
@@ -46,5 +46,6 @@ def test_simple(jobs, expected):
     - 요청이 가장 나중에 들어온 것 부터 처리해야한다고 생각함
     - 인터넷을 보니까 가장 짧은 작업을 먼저 끝내야 한다고 했다.
 
-    아 이거 진짜 모르겠다ㅠㅠㅠㅠㅠ 다른 사람 코드 올립니닷...
+[ 설명 듣고 이해한 내용 ]
+    - 
 """

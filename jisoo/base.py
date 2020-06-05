@@ -1,12 +1,12 @@
 import pytest
 
 
-def solution(N):
+def solution(hi):
     
 
 
-@pytest.mark.parametrize("N, expected", [
+@pytest.mark.parametrize("hi, expected", [
     ()
 ])
-def test_simple(N, expected):
-    assert solution(N) == expected
+def test_simple(hi, expected):
+    assert solution(hi) == expected
