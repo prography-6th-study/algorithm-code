@@ -1,0 +1,14 @@
+```python
+def solution(citations):
+    citations.sort()
+    for i in range(len(citations)):
+        if citations[i] >= len(citations)-i:
+            # 논문이 인용된 횟수(h번 이상) >= 인용된 논문의 개수(h개 == h번)
+            return len(citations)-i
+    else:
+        return 0
+```
+
+### 나의 풀이
+
+- 정렬하면 점점 커질수록 얼마나 인용되었는지 나오기 때문에 갯수가 초과하는 것이 곳 h-index 가 된다.
