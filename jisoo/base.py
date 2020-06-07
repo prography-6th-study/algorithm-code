@@ -10,3 +10,8 @@ def solution(hi):
 ])
 def test_simple(hi, expected):
     assert solution(hi) == expected
+
+"""
+[ 풀이 방법 ]
+- 
+"""
