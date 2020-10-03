@@ -7,10 +7,10 @@ def get_combination_index_relation(relation, combination):
     temp = []
     count = 0
     for r in relation:
-        r_temp = []
+        column = []
         for c in combination:
-            r_temp.append(r[c])
-        temp.append(r_temp)
+            column.append(r[c])
+        temp.append(column)
         count += 1
     if count == len(set(map(tuple, temp))):
         return True
@@ -19,13 +19,7 @@ def get_combination_index_relation(relation, combination):
 
 def check_minimality(answer, combination):
     for a in answer:
-        if len(a) == len(combination):
-            continue
-        check = 0
-        for c in combination:
-            if c in a:
-                check += 1
-        if check == len(a):
+        if all(c in combination for c in a):
             return False
     return True
 
@@ -42,7 +36,6 @@ def solution(relation):
         if get_combination_index_relation(relation, c):
             if check_minimality(answer, c):
                 answer.append(c)
-    print(answer)
     return len(answer)
 
 
